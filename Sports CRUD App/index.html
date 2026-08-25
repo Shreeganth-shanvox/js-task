@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Products List</title>
+    <link rel="stylesheet" href="./style.css">
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Sports Products List</h1>
+      <p class="subtitle">
+        Everything here is saved in your browser (localStorage) — no backend
+        involved.
+      </p>
+
+      <div class="toolbar">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by name or category..."
+        />
+        <button class="btn-search" id="searchBtn">Search</button>
+        <button class="btn-add" id="openAdd">+ Add Product</button>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price (₹)</th>
+            <th>Stock</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="overlay" id="overlay">
+      <div class="modal">
+        <h2>Add a Product</h2>
+        <form id="addForm" novalidate>
+          <div class="field" id="f-name">
+            <input type="text" id="p-name" placeholder="Product name" />
+            <div class="field-error">Please enter a product name.</div>
+          </div>
+          <div class="field" id="f-category">
+            <input type="text" id="p-category" placeholder="Category" />
+            <div class="field-error">Please enter a category.</div>
+          </div>
+          <div class="field" id="f-price">
+            <input
+              type="number"
+              id="p-price"
+              placeholder="Price"
+              min="0"
+              step="1"
+            />
+            <div class="field-error">Please enter a valid price.</div>
+          </div>
+          <div class="field" id="f-stock">
+            <input
+              type="number"
+              id="p-stock"
+              placeholder="Stock"
+              min="0"
+              step="1"
+            />
+            <div class="field-error">Please enter a valid stock number.</div>
+          </div>
+          <div class="modal-actions">
+            <button type="submit" class="btn-save">Add</button>
+            <button type="button" class="btn-cancel" id="cancelAdd">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

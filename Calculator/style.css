@@ -1,0 +1,121 @@
+header h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.outer-box {
+  display: flex;
+  flex-direction: column;
+  width: 380px;
+  height: 640px;
+  background-color: black;
+  margin: 20px auto;
+  border-radius: 35px;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.display {
+  width: 85%;
+  height: 100px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+#result {
+  font-family: monospace;
+  font-size: 2.8rem;
+  color: #222;
+  margin: 0;
+}
+
+.inner-box {
+  width: 85%;
+  height: 450px;
+  margin: 15px auto 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 15px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+}
+
+.inner-box button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  transition:
+    background-color 0.1s ease,
+    transform 0.05s ease;
+}
+
+.inner-box button:hover {
+  background-color: #555;
+}
+
+.inner-box button:active {
+  transform: scale(0.96);
+}
+
+.inner-box .operator {
+  background-color: #d97706;
+  color: white;
+}
+
+.inner-box .operator:hover {
+  background-color: #b45309;
+}
+
+.inner-box #equals {
+  background-color: #d97706;
+  color: white;
+  grid-row: span 2;
+}
+
+.inner-box #equals:hover {
+  background-color: #b45309;
+}
+
+.inner-box #clear,
+.inner-box #backspace {
+  background-color: #9ca3af;
+  color: #111;
+}
+
+.inner-box #clear:hover,
+.inner-box #backspace:hover {
+  background-color: #6b7280;
+}
+
+.inner-box .zero {
+  grid-column: span 2;
+}
+
+@media (min-width: 1000px) {
+  header h1 {
+    display: none;
+  }
+
+  .outer-box {
+    height: 100vh;
+    margin-top: 0 auto;
+  }
+}
