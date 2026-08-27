@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To do List</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="sidebar">
+      <!-- hamburger menu button -->
+      <button class="menu-button" id="menuBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <img src="./assets/my pic 2.jpg" alt="pfp" />
+      <strong>Shreeganth S</strong>
+      <p>shree@gmail.com</p>
+      <hr />
+      <div class="tools">
+        <button class="active">My Tasks</button>
+        <button>Settings</button>
+      </div>
+    </section>
+
+    <main>
+      <!-- task adding section -->
+      <h1>My Tasks</h1>
+      <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Type your task here.." autocomplete="off" />
+        <button type="submit">+ Add</button>
+      </form>
+
+      <!-- status bar -->
+      <div class="status-bar">
+        <div class="status">
+          <button class="filter-btn active" data-filter="All">All</button>
+          <span>|</span>
+          <button class="filter-btn" data-filter="Active">Active</button>
+          <span>|</span>
+          <button class="filter-btn" data-filter="Completed">Completed</button>
+        </div>
+        <div class="tasks-left">
+          <p><span id="tasksLeftCount">0</span> tasks left</p>
+        </div>
+      </div>
+
+      <!-- cards -->
+      <ul class="tasks" id="taskList">
+        <!-- tasks are rendered here by script.js -->
+      </ul>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
